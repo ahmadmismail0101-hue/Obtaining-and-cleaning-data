@@ -1,0 +1,63 @@
+
+---
+
+# 📘 CodeBook.md (جاهز ومعتمد)
+
+```md
+# CodeBook – Tidy Data Set
+
+## Source Data
+Human Activity Recognition Using Smartphones Dataset  
+Collected from accelerometers and gyroscopes of a Samsung Galaxy S smartphone.
+
+---
+
+## Data Processing Steps
+
+1. Merged training and test datasets.
+2. Extracted only measurements containing mean() and std().
+3. Replaced activity IDs with descriptive activity names.
+4. Applied descriptive variable names.
+5. Created a second tidy dataset with the average of each variable for each activity and subject.
+
+---
+
+## Variables
+
+### Identifiers
+- **subject**  
+  Integer (1–30) identifying the participant.
+
+- **activity**  
+  Activity performed by the subject:
+  - WALKING  
+  - WALKING_UPSTAIRS  
+  - WALKING_DOWNSTAIRS  
+  - SITTING  
+  - STANDING  
+  - LAYING  
+
+---
+
+### Measurement Variables
+All remaining variables are averages of the original measurements,
+grouped by subject and activity.
+
+Examples:
+- `Time_BodyAccelerometer_mean_X`
+- `Time_BodyAccelerometer_std_Y`
+- `Frequency_BodyGyroscope_mean_Z`
+
+---
+
+## Units
+- Acceleration: standard gravity units (g)
+- Angular velocity: radians/second
+
+---
+
+## Summary Dataset
+The final dataset (`tidy_data.txt`) contains:
+- 180 rows (30 subjects × 6 activities)
+- One column per averaged measurement variable
+- One row per subject and activity combination
